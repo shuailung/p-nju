@@ -12,6 +12,7 @@ Replace values of varibles username and password(in line 67 and 68) with yours.
 >            olders with yours
 >                username = 'zhangsan'
 >                password = '123456'
+
 ### TO-DO
 1. handler exceptions(IMPORTANT) 
 2. a user-friendly interactive UI
@@ -19,17 +20,14 @@ Replace values of varibles username and password(in line 67 and 68) with yours.
 4. logout if you want
          
 ### How does it work?
-1.  send request to http://p.nju.edu.cn. 
+1 Send request to http://p.nju.edu.cn. 
 After receive response use re to extract 201510210840 which is used in request header.
-response data format
 ```javascript
 <script type="text/javascript">
    location.href="/portal/index.html?v=201510210840";
 </script>
 ```
- 
-2.  send request to the real login page http://p.nju.edu.cn/portal_io/login .
-    headers:
+2 Send request to the real login page http://p.nju.edu.cn/portal_io/login .
 ```javascript
 POST /portal_io/login HTTP/1.1
 Host: p.nju.edu.cn
@@ -45,7 +43,8 @@ Referer: http://p.nju.edu.cn/portal/index.html?v=201510210840
 Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.8,en;q=0.6,zh-TW;q=0.4
 ```
-        
+
+  
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
